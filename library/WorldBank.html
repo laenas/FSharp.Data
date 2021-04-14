@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>WorldBank Provider
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="FSharp.Data">
+
+    <link rel="stylesheet" id="theme_link" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/materia/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/FSharp.Data/content/navbar-fixed-left.css" />
+    <link type="text/css" rel="stylesheet" href="/FSharp.Data/content/fsdocs-default.css" />
+    <link type="text/css" rel="stylesheet" href="/FSharp.Data/content/fsdocs-custom.css" />
+    <script type="text/javascript" src="/FSharp.Data/content/fsdocs-tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+    <!-- END SEARCH BOX: this adds support for the search box -->
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-secondary fixed-left" id="fsdocs-nav">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <a href="/FSharp.Data/"><img id="fsdocs-logo" src="/FSharp.Data/img/logo.png" /></a>
+            <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+            <div id="header">
+                <div class="searchbox" id="fsdocs-searchbox">
+                    <label for="search-by">
+                        <i class="fas fa-search"></i>
+                    </label>
+                    <input data-search-input="" id="search-by" type="search" placeholder="Search..." />
+                    <span data-search-clear="">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            </div>
+
+            <!-- END SEARCH BOX: this adds support for the search box -->
+            <ul class="navbar-nav">
+                <li class="nav-header">Links</li>
+                <li class="nav-item" id="fsdocs-license-link"><a class="nav-link" href="{{fsdocs-license-link}}">License (Apache 2.0)</a></li>
+                <li class="nav-item" id="fsdocs-release-notes-link"><a class="nav-link" href="{{fsdocs-release-notes-link}}">Release Notes</a></li>
+                <li class="nav-item" id="fsdocs-repository-link"><a class="nav-link" href="{{fsdocs-repository-link}}">Source Repository</a></li>
+                <li class="nav-header">
+  Documentation
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/CsvFile.html">
+    CSV Parser
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/CsvProvider.html">
+    CSV Type Provider
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/HtmlCssSelectors.html">
+    HTML CSS selectors
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/HtmlParser.html">
+    HTML Parser
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/HtmlProvider.html">
+    HTML Type Provider
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/Http.html">
+    HTTP Utilities
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/JsonProvider.html">
+    JSON Type Provider
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/JsonValue.html">
+    JSON Parser
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/WorldBank.html">
+    WorldBank Provider
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/library/XmlProvider.html">
+    XML Type Provider
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/tutorials/JsonAnonymizer.html">
+    Anonymizing JSON
+
+  </a>
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/tutorials/JsonToXml.html">
+    Converting between JSON and XML
+
+  </a>
+</li>
+                <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="/FSharp.Data/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="muted"><a href="/FSharp.Data/">FSharp.Data</a></h3>
+        </div>
+        <hr />
+        <div class="container" id="fsdocs-content">
+            <h1><a name="WorldBank-Provider" class="anchor" href="#WorldBank-Provider">WorldBank Provider</a></h1>
+<p><a href="https://mybinder.org/v2/gh/fsprojects/FSharp.Data/gh-pages?filepath=library/WorldBank.ipynb">View this documentation in a .NET Interactive notebook <img src="https://mybinder.org/badge_logo.svg" alt="Binder" /></a></p>
+<p>The <a href="http://www.worldbank.org">World Bank</a> is an international organization that provides
+financial and technical assistance to developing countries around the world. As one of the
+activities, the World Bank also collects development indicators and other data about
+countries in the world. The <a href="http://data.worldbank.org/">data catalog</a> contains over
+8,000 indicators that can be programmatically accessed.</p>
+<p>The WorldBank Type Provider makes the WorldBank data easily accessible to F# programs and
+scripts in a type-safe manner. This article provides an introduction.</p>
+<h2><a name="Introducing-the-provider" class="anchor" href="#Introducing-the-provider">Introducing the provider</a></h2>
+<div class="container-fluid" style="margin:15px 0px 15px 0px;">
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span10" id="anim-holder">
+            <a id="lnk" href="../images/wb.gif"><img id="anim" src="../images/wb.gif" /></a>
+        </div>
+        <div class="span1"></div>
+    </div>
+</div>
+<p>The following example initializes a connection to the WorldBank using the <code>GetDataContext</code> method and then
+retrieves the percentage of population who attend universities in the UK:</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="id">FSharp</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="id">Data</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="id">data</span> <span class="o">=</span> <span class="id">WorldBankData</span><span class="pn">.</span><span class="id">GetDataContext</span><span class="pn">(</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="id">data</span>
+  <span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``United Kingdom``</span>
+  <span class="pn">.</span><span class="id">Indicators</span><span class="pn">.</span><span class="id">``Gross capital formation (% of GDP)``</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="m">Seq</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="id">maxBy</span> <span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="fn">fst</span>
+</code></pre>
+<p>When generating the data context, the WorldBank Type Provider retrieves the list of all
+countries known to the WorldBank and the list of all supported indicators. Both of these
+dimensions are provided as properties, so you can use autocomplete to easily discover
+various data sources. Most of the indicators use longer names, so we need to wrap the name
+in <code>\</code>``.</p>
+<p>The result of the <code>Gross capital formation (% of GDP)</code> property is a sequence with
+values for different years. Using <code>Seq.maxBy fst</code> we get the most recent available value.</p>
+<h2><a name="Using-World-Bank-data-asynchronously" class="anchor" href="#Using-World-Bank-data-asynchronously">Using World Bank data asynchronously</a></h2>
+<p>If you need to download large amounts of data or run the operation without
+blocking the caller, then you probably want to use F# asynchronous workflows to perform
+the operation. The FSharp.Data package also provides the <code>WorldBankDataProvider</code> type which takes
+a number of static parameters. If the <code>Asynchronous</code> parameter is set to <code>true</code> then the
+type provider generates all operations as asynchronous:</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">type</span> <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="rt">WorldBank</span> <span class="o">=</span> <span class="id">WorldBankDataProvider</span><span class="pn">&lt;</span><span class="s">&quot;World Development Indicators&quot;</span><span class="pn">,</span> <span class="id">Asynchronous</span><span class="o">=</span><span class="k">true</span><span class="pn">&gt;</span>
+<span onmouseout="hideTip(event, 'fs7', 9)" onmouseover="showTip(event, 'fs7', 9)" class="id">WorldBank</span><span class="pn">.</span><span class="id">GetDataContext</span><span class="pn">(</span><span class="pn">)</span>
+</code></pre>
+<p>The above snippet specified "World Development Indicators" as the name of the data
+source (a collection of commonly available indicators) and it set the optional argument
+<code>Asynchronous</code> to <code>true</code>. As a result, properties such as
+<code>Gross capital formation (% of GDP)</code> will now have a type <code>Async&lt;(int * int)[]&gt;</code> meaning
+that they represent an asynchronous computation that can be started and will eventually
+produce the data.</p>
+<h3><a name="Downloading-data-in-parallel" class="anchor" href="#Downloading-data-in-parallel">Downloading data in parallel</a></h3>
+<p>To demonstrate the asynchronous version of the type provider, let's write code that
+downloads the university enrollment data about a number of countries in parallel.
+We first create a data context and then define an array with some countries we want to
+process:</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs8', 10)" onmouseover="showTip(event, 'fs8', 10)" class="id">wb</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs7', 11)" onmouseover="showTip(event, 'fs7', 11)" class="id">WorldBank</span><span class="pn">.</span><span class="id">GetDataContext</span><span class="pn">(</span><span class="pn">)</span>
+
+<span class="c">// Create a list of countries to process</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 12)" onmouseover="showTip(event, 'fs9', 12)" class="id">countries</span> <span class="o">=</span> 
+ <span class="pn">[|</span> <span onmouseout="hideTip(event, 'fs8', 13)" onmouseover="showTip(event, 'fs8', 13)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``Arab World``</span>
+    <span onmouseout="hideTip(event, 'fs8', 14)" onmouseover="showTip(event, 'fs8', 14)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``European Union``</span>
+    <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Australia</span>
+    <span onmouseout="hideTip(event, 'fs8', 16)" onmouseover="showTip(event, 'fs8', 16)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Brazil</span>
+    <span onmouseout="hideTip(event, 'fs8', 17)" onmouseover="showTip(event, 'fs8', 17)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Canada</span>
+    <span onmouseout="hideTip(event, 'fs8', 18)" onmouseover="showTip(event, 'fs8', 18)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Chile</span>
+    <span onmouseout="hideTip(event, 'fs8', 19)" onmouseover="showTip(event, 'fs8', 19)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``Czech Republic``</span>
+    <span onmouseout="hideTip(event, 'fs8', 20)" onmouseover="showTip(event, 'fs8', 20)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Denmark</span>
+    <span onmouseout="hideTip(event, 'fs8', 21)" onmouseover="showTip(event, 'fs8', 21)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">France</span>
+    <span onmouseout="hideTip(event, 'fs8', 22)" onmouseover="showTip(event, 'fs8', 22)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">Greece</span>
+    <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``Low income``</span>
+    <span onmouseout="hideTip(event, 'fs8', 24)" onmouseover="showTip(event, 'fs8', 24)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``High income``</span>
+    <span onmouseout="hideTip(event, 'fs8', 25)" onmouseover="showTip(event, 'fs8', 25)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``United Kingdom``</span>
+    <span onmouseout="hideTip(event, 'fs8', 26)" onmouseover="showTip(event, 'fs8', 26)" class="id">wb</span><span class="pn">.</span><span class="id">Countries</span><span class="pn">.</span><span class="id">``United States``</span> <span class="pn">|]</span>
+</code></pre>
+<p>To download the information in parallel, we can create a list of asynchronous
+computations, compose them using <code>Async.Parallel</code> and then run the (single) obtained
+computation to perform all the downloads:</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="pn">[</span> <span class="k">for</span> <span onmouseout="hideTip(event, 'fs10', 27)" onmouseover="showTip(event, 'fs10', 27)" class="fn">c</span> <span class="k">in</span> <span onmouseout="hideTip(event, 'fs9', 28)" onmouseover="showTip(event, 'fs9', 28)" class="id">countries</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs10', 29)" onmouseover="showTip(event, 'fs10', 29)" class="fn">c</span><span class="pn">.</span><span class="id">Indicators</span><span class="pn">.</span><span class="id">``Gross capital formation (% of GDP)``</span> <span class="pn">]</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 30)" onmouseover="showTip(event, 'fs11', 30)" class="rt">Async</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 31)" onmouseover="showTip(event, 'fs12', 31)" class="id">Parallel</span>
+<span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 32)" onmouseover="showTip(event, 'fs11', 32)" class="rt">Async</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 33)" onmouseover="showTip(event, 'fs13', 33)" class="id">RunSynchronously</span>
+</code></pre>
+<h2><a name="Related-articles" class="anchor" href="#Related-articles">Related articles</a></h2>
+<ul>
+<li><a href="../reference/fsharp-data-worldbankdataprovider.html">API Reference: WorldBankDataProvider type provider</a></li>
+</ul>
+
+            <div class="fsdocs-tip" id="fs1">namespace Microsoft.FSharp</div>
+<div class="fsdocs-tip" id="fs2">namespace Microsoft.FSharp.Data</div>
+<div class="fsdocs-tip" id="fs3">val data : obj</div>
+<div class="fsdocs-tip" id="fs4">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
+<div class="fsdocs-tip" id="fs5">val maxBy : projection:(&#39;T -&gt; &#39;U) -&gt; source:seq&lt;&#39;T&gt; -&gt; &#39;T (requires comparison)</div>
+<div class="fsdocs-tip" id="fs6">val fst : tuple:(&#39;T1 * &#39;T2) -&gt; &#39;T1</div>
+<div class="fsdocs-tip" id="fs7">type WorldBank = obj</div>
+<div class="fsdocs-tip" id="fs8">val wb : obj</div>
+<div class="fsdocs-tip" id="fs9">val countries : obj []</div>
+<div class="fsdocs-tip" id="fs10">val c : obj</div>
+<div class="fsdocs-tip" id="fs11">Multiple items<br />type Async =<br />&#160;&#160;static member AsBeginEnd : computation:(&#39;Arg -&gt; Async&lt;&#39;T&gt;) -&gt; (&#39;Arg * AsyncCallback * obj -&gt; IAsyncResult) * (IAsyncResult -&gt; &#39;T) * (IAsyncResult -&gt; unit)<br />&#160;&#160;static member AwaitEvent : event:IEvent&lt;&#39;Del,&#39;T&gt; * ?cancelAction:(unit -&gt; unit) -&gt; Async&lt;&#39;T&gt; (requires delegate and &#39;Del :&gt; Delegate)<br />&#160;&#160;static member AwaitIAsyncResult : iar:IAsyncResult * ?millisecondsTimeout:int -&gt; Async&lt;bool&gt;<br />&#160;&#160;static member AwaitTask : task:Task&lt;&#39;T&gt; -&gt; Async&lt;&#39;T&gt; + 1 overload<br />&#160;&#160;static member AwaitWaitHandle : waitHandle:WaitHandle * ?millisecondsTimeout:int -&gt; Async&lt;bool&gt;<br />&#160;&#160;static member CancelDefaultToken : unit -&gt; unit<br />&#160;&#160;static member Catch : computation:Async&lt;&#39;T&gt; -&gt; Async&lt;Choice&lt;&#39;T,exn&gt;&gt;<br />&#160;&#160;static member Choice : computations:seq&lt;Async&lt;&#39;T option&gt;&gt; -&gt; Async&lt;&#39;T option&gt;<br />&#160;&#160;static member FromBeginEnd : beginAction:(AsyncCallback * obj -&gt; IAsyncResult) * endAction:(IAsyncResult -&gt; &#39;T) * ?cancelAction:(unit -&gt; unit) -&gt; Async&lt;&#39;T&gt; + 3 overloads<br />&#160;&#160;static member FromContinuations : callback:((&#39;T -&gt; unit) * (exn -&gt; unit) * (OperationCanceledException -&gt; unit) -&gt; unit) -&gt; Async&lt;&#39;T&gt;<br />&#160;&#160;...<br /><br />--------------------<br />type Async&lt;&#39;T&gt; =</div>
+<div class="fsdocs-tip" id="fs12">static member Async.Parallel : computations:seq&lt;Async&lt;&#39;T&gt;&gt; -&gt; Async&lt;&#39;T []&gt;<br />static member Async.Parallel : computations:seq&lt;Async&lt;&#39;T&gt;&gt; * ?maxDegreeOfParallelism:int -&gt; Async&lt;&#39;T []&gt;</div>
+<div class="fsdocs-tip" id="fs13">static member Async.RunSynchronously : computation:Async&lt;&#39;T&gt; * ?timeout:int * ?cancellationToken:System.Threading.CancellationToken -&gt; &#39;T</div>
+
+        </div>
+
+        <!-- BEGIN SEARCH BOX: this adds support for the search box -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.css" />
+        <script type="text/javascript">var fsdocs_search_baseurl = '/FSharp.Data/';</script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.8/lunr.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js"></script>
+        <script type="text/javascript" src="/FSharp.Data/content/fsdocs-search.js"></script>
+        <!-- END SEARCH BOX: this adds support for the search box -->
+    </div>
+</body>
+
+</html>
+
